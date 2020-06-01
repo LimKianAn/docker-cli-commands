@@ -1,7 +1,7 @@
 # node a in a swarm
 echo "RT" > classified
 docker secret create secret-v0 classified
-docker secret ls^
+docker secret ls
 docker secret inspect secret-v0
 docker service create -d --name secret-service --secret secret-v0 alpine sleep 1d
 docker service ls
